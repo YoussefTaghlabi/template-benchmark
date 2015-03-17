@@ -41,6 +41,28 @@
     React & JSX          ( 2363ms) - 13028% slower
     React                ( 2437ms) - 13439% slower
 
+### Mac OS X Yosemite, MacBook Pro (Retina, Mid 2012), 2.7GGz Core i7, 16GB ram, NodeJs v.12.0 (1000x) 
+
+
+	Gaikan               (   18ms) - fastest
+	Fest                 (   21ms) - 17% slower
+	doT                  (   23ms) - 28% slower
+	ECT                  (   24ms) - 33% slower
+	EJS without `with`   (   31ms) - 72% slower
+	Hogan.js             (   31ms) - 72% slower
+	Vash                 (   32ms) - 78% slower
+	Dust                 (   33ms) - 83% slower
+	Underscore           (   46ms) - 156% slower
+	Swig                 (   47ms) - 161% slower
+	EJS                  (   62ms) - 244% slower
+	Eco                  (   63ms) - 250% slower
+	Handlebars.js        (   67ms) - 272% slower
+	CoffeeKup            (  115ms) - 539% slower
+	Jade without `with`  (  125ms) - 594% slower
+	Jade                 (  274ms) - 1422% slower
+	React                (  744ms) - 4033% slower
+	React & JSX          (  789ms) - 4283% slower
+
 	
 ## Usage
 
