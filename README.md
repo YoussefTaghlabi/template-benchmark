@@ -15,10 +15,12 @@
 - [Swig](https://github.com/paularmstrong/swig) v0.13.5
 - [Underscore](https://github.com/documentcloud/underscore) v1.4.4 ([website](http://underscorejs.org/))
 - [Gaikan](https://github.com/Deathspike/gaikan) v2.0.0
+- [React](https://github.com/facebook/react) v0.12.2
+- React & JSX 
 
 ## Results
 
-### Windows 7 x64 SP1, NodeJS 0.10.26 (1000x)
+### Windows Server 2008 R2 Standard 64bit, NodeJS v0.10.36 (1000x)
 
     Gaikan               (   18ms) - fastest
     doT                  (   20ms) - 11% slower
