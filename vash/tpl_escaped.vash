@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>@model.title</title>
+	</head>
+	<body>
+		<p>@model.text</p>
+		@if(model.projects.length){
+			for (var i = 0; i < model.projects.length; i++) {
+				<a href="@model.projects[i].url">@model.projects[i].name</a>
+				<p>@model.projects[i].description</p>
+			}
+		}else{
+			<span>No projects</span>
+		}
+	</body>
+</html>

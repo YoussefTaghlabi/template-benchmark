@@ -1,10 +1,11 @@
 var data = require('./data');
 
-var count = 100000;
+var count = 1000;
 var ect = require('./ect/ect.js');
 var ejs = require('./ejs/ejs.js');
 var ejsWithoutWith = require('./ejs-without-with/ejs.js');
 var jade = require('./jade/jade.js');
+var vash = require('./vash/vash.js');
 var jadeWithoutWith = require('./jade-without-with/jade.js');
 var eco = require('./eco/eco.js');
 var swig = require('./swig/swig.js');
@@ -16,6 +17,11 @@ var handlebars = require('./handlebars/handlebars.js');
 var coffeekup = require('./coffeekup/coffeekup.js');
 var underscore = require('./underscore/underscore.js');
 var gaikan = require('./gaikan/gaikan.js');
+var reactJsx = require('./react-jsx/reactjsx.js');
+var react = require('./react/react.js');
+
+
+
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -30,7 +36,8 @@ var test = function(name, sample, cb) {
 	sample.prepare(data, function() {
 		start = Date.now();
 		for (var j = 0; j < count; j++) {
-			sample.step(done);
+
+            sample.step(done);
 		}
 	});
 };
@@ -48,28 +55,31 @@ var testUnescaped = function(name, sample, cb) {
 	sample.prepareUnescaped(data, function() {
 		start = Date.now();
 		for (var j = 0; j < count; j++) {
-			sample.step(done);
+
+            sample.step(done);
 		}
 	});
 };
 
 var samples = [
-
-	{ name : 'Jade', sample : jade },
-	{ name : 'CoffeeKup', sample : coffeekup },
-	{ name : 'Jade without `with`', sample : jadeWithoutWith },
-	{ name : 'Handlebars.js', sample : handlebars },
-	{ name : 'EJS', sample : ejs },
-	{ name : 'Eco', sample : eco },
-	{ name : 'Underscore', sample : underscore },
-	{ name : 'Swig', sample : swig },
-	{ name : 'doT', sample : dot },
-	{ name : 'EJS without `with`', sample : ejsWithoutWith },
-	{ name : 'Fest', sample : fest },
-	{ name : 'Hogan.js', sample : hogan },
-	{ name : 'Dust', sample : dust },
-	{ name : 'Gaikan', sample: gaikan },
-	{ name : 'ECT', sample : ect },
+    { name : 'React', sample : react },
+    { name : 'React & JSX', sample : reactJsx },
+    { name : 'EJS', sample : ejs },
+    { name : 'Vash', sample : vash },
+    { name : 'Jade', sample : jade },
+    { name : 'CoffeeKup', sample : coffeekup },
+    { name : 'Jade without `with`', sample : jadeWithoutWith },
+    { name : 'Handlebars.js', sample : handlebars },
+    { name : 'Eco', sample : eco },
+    { name : 'Underscore', sample : underscore },
+    { name : 'Swig', sample : swig },
+    { name : 'doT', sample : dot },
+    { name : 'EJS without `with`', sample : ejsWithoutWith },
+    { name : 'Fest', sample : fest },
+    { name : 'Hogan.js', sample : hogan },
+    { name : 'Dust', sample : dust },
+    { name : 'Gaikan', sample: gaikan },
+    { name : 'ECT', sample : ect }
 ];
 
 var results = [];
